@@ -82,7 +82,6 @@ const DefaultTag = "Default"
 const GlobalTag = "Global"
 
 var dataStore map[string]BootDataStore = make(map[string]BootDataStore)
-var imageCache = func() hmetcd.Kvi { s, _ := hmetcd.Open("mem:", ""); return s }()
 
 func makeKey(key, subkey string) string {
 	ret := key
